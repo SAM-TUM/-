@@ -1,4 +1,4 @@
-#はい or いいえ
+#はい or いいえ をcsvで取得
 x = input()
 question = "質問のリスト"
 
