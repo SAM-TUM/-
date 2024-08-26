@@ -5,24 +5,27 @@
 #NEXTボタン
 #--------------------------
 
-#はい or いいえ をcsvで取得
+#はい or いいえ をcsvで取得、仮でinput
 x = input()
 
-#質問番号
+#質問番号　仮でinput
 question = input()
 
-#アドバイス一覧
-advice = {"質問1": "アドバイス1", "質問2": "アドバイス2", "質問3": "アドバイス3"}
+#保存されたアドバイス一覧　仮でdict
+advice_dict = {"質問1": "アドバイス1", "質問2": "アドバイス2", "質問3": "アドバイス3"}
 
 
+def advice():
+    global x,question,advice_dict
+    
+    #質問が無くなるまで繰り返し
+    if x == "はい":
+        #質問に対応したアドバイスを出力
+        print(advice_dict[question])
+    elif x == "いいえ":
+        pass
 
-#質問が無くなるまで繰り返し
-if x == "はい":
-    #質問に対応したアドバイスを出力
-    print(advice[question])
-else:
-    pass
-
+advice()
 
 #--------------------------
 #最後の質問
