@@ -10,8 +10,10 @@ gender =input()
 if gender =="male":
   contentsFile =open("contentsMale.csv","r")
 elif gender =="female":
-  #女性用処理
-  questionLi =input("女性")
+  contentsFile =open("contentsFemale.csv","r")
+else:
+  pass
+questionLi =None
 
 #HTMLでデザイン
 for index,question in enumerate(questionLi):
