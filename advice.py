@@ -24,7 +24,7 @@ def advice_man(x,advice_man):
 #--------------------------
 
 #女性用 
-def advice_woman(x):
+def advice_woman(x_advice_woman):
     #file_woman = open('contentsFemale.csv','r')    #女性用csvを読み込み
     #advice_woman = csv.DictReader(file_woman)     #辞書として変換
     
