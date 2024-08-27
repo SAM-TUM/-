@@ -10,12 +10,12 @@ import csv
 #質問が無くなるまで繰り返し
 
 #男性用    
-def advice_male(x):
-    file_male = open('contentsMale.csv','r')    #男性用csvを読み込み
-    advice_male = csv.DictReader(file_male)     #辞書として変換
+def advice_man(x):
+    file_man = open('contentsMale.csv','r')    #男性用csvを読み込み
+    advice_woman = csv.DictReader(file_man)     #辞書として変換
 
     if x == "はい":
-        print(advice_male[advice])    #質問に対応したアドバイスを出力
+        print(advice_man[advice])    #質問に対応したアドバイスを出力
     elif x == "いいえ":
         pass
 
@@ -25,15 +25,15 @@ def advice_male(x):
 
 #女性用 
 def advice_woman(x):
-    file_female = open('contentsFemale.csv','r')    #女性用csvを読み込み
-    advice_female = csv.DictReader(file_female)     #辞書として変換
+    file_woman = open('contentsFemale.csv','r')    #女性用csvを読み込み
+    advice_woman = csv.DictReader(file_woman)     #辞書として変換
     
     if x == "はい":
-        print(advice_female[advice])    #質問に対応したアドバイスを出力
+        print(advice_woman[advice])    #質問に対応したアドバイスを出力
     elif x == "いいえ":
         pass
 
-    file_female.close()
+    file_woman.close()
 
 #----------------------------------------
 #最後の質問回答後
