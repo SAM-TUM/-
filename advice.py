@@ -18,12 +18,13 @@ question = input("質問番号：")
 #--------------------------
 import csv
 
+#質問が無くなるまで繰り返し
+
 #男性用    
 def advice_man():
     file_man = open('男性用ファイル名.csv','r')    #男性用csv
     advice_man = csv.DictReader(file_man)     #辞書として変換
-    
-    #質問が無くなるまで繰り返し
+
     if x == "はい":
         #質問に対するアドバイスを出力
         #print(advice_man[question])    #質問に対応したアドバイスを出力
@@ -39,7 +40,6 @@ def advice_woman():
     file_woman = open('女性用ファイル名.csv','r')    #女性用csv
     advice_woman = csv.DictReader(file)     #辞書として変換
     
-    #質問が無くなるまで繰り返し
     if x == "はい":
         #質問に対するアドバイスを出力
         #print(advice_woman[question])    #質問に対応したアドバイスを出力
