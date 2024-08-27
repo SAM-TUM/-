@@ -15,7 +15,6 @@ def advice_man(x):
     advice_man = csv.DictReader(file_man)     #辞書として変換
 
     if x == "はい":
-        #質問に対するアドバイスを出力
         print(advice_man[advice])    #質問に対応したアドバイスを出力
     elif x == "いいえ":
         pass
@@ -30,7 +29,6 @@ def advice_woman(x):
     advice_woman = csv.DictReader(file)     #辞書として変換
     
     if x == "はい":
-        #質問に対するアドバイスを出力
         print(advice_woman[advice])    #質問に対応したアドバイスを出力
     elif x == "いいえ":
         pass
