@@ -11,7 +11,7 @@ import csv
 
 #男性用    
 def advice_male(x):
-    file_male = open('contentsMale.csv','r')    #男性用csv
+    file_male = open('contentsMale.csv','r')    #男性用csvを読み込み
     advice_male = csv.DictReader(file_male)     #辞書として変換
 
     if x == "はい":
@@ -25,7 +25,7 @@ def advice_male(x):
 
 #女性用 
 def advice_woman(x):
-    file_female = open('contentsFemale.csv','r')    #女性用csv
+    file_female = open('contentsFemale.csv','r')    #女性用csvを読み込み
     advice_female = csv.DictReader(file_female)     #辞書として変換
     
     if x == "はい":
