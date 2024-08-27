@@ -18,7 +18,7 @@ for index,question in enumerate(questionLi):
   
   #アドバイス出力処理
 
-  
+	
   #入力受付
   button =input("Y or N")
 
