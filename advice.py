@@ -1,8 +1,9 @@
-#はい or いいえ を取得、仮でinput
-x = input("はいorいいえ：")
+if __name__ == "__main__":
+    #はい or いいえ を取得、仮でinput
+    x = input("はいorいいえ：")
 
-#質問番号　仮でinput
-advice = input("質問番号：")
+    #質問番号　仮でinput
+    advice = input("質問番号：")
 
 #----------------------------------------
 import csv
