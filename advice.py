@@ -2,7 +2,7 @@
 x = input("はいorいいえ：")
 
 #質問番号　仮でinput
-question = input("質問番号：")
+advice = input("質問番号：")
 
 #----------------------------------------
 import csv
