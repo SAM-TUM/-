@@ -2,6 +2,7 @@
 #質問分野
 
 import csv
+import advice as ad
 
 #データ取得　仮でinput
 gender =input()
@@ -20,7 +21,10 @@ for index,content in enumerate(contentsData):
   print(content[question])
   
   #入力受付
-  #button =input("Y or N")
+  answer =input("Y or N")
   #answered =int(index)+1
-  
-  #アドバイス出力処理
+  if gender =="male":
+    ad.advice_man(answer)
+  elif gender =="female":
+    ad.advice_woman(answer)
+    
