@@ -14,20 +14,24 @@ x = input()
 question = input()
 
 #保存されたアドバイス一覧　仮でdict
-advice_dict = {"質問1": "アドバイス1", "質問2": "アドバイス2", "質問3": "アドバイス3"}
+advice_man = {"男質問1": "男アドバイス1", "男質問2": "男アドバイス2", "男質問3": "男アドバイス3"}
+advice_woman = {"女質問1": "女アドバイス1", "女質問2": "女アドバイス2", "女質問3": "女アドバイス3"}
 
+#男性用    
+#質問が無くなるまで繰り返し
+if x == "はい":
+    #質問に対応したアドバイスを出力
+    print(advice_man[question])
+elif x == "いいえ":
+    pass
 
-def advice():
-    global x,question,advice_dict
-    
-    #質問が無くなるまで繰り返し
-    if x == "はい":
-        #質問に対応したアドバイスを出力
-        print(advice_dict[question])
-    elif x == "いいえ":
-        pass
-
-advice()
+#女性用    
+#質問が無くなるまで繰り返し
+if x == "はい":
+    #質問に対応したアドバイスを出力
+    print(advice_woman[question])
+elif x == "いいえ":
+    pass
 
 #--------------------------
 #最後の質問回答後
