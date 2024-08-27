@@ -20,32 +20,39 @@ question = input("質問番号：")
 #男性用    
 import csv
 
-file_man = open('男性用ファイル.csv','r')    #男性用
-advice_man = csv.DictReader(file)     #辞書として変換
+def advice_man():
+    file_man = open('男性用ファイル名.csv','r')    #男性用csv
+    advice_man = csv.DictReader(file_man)     #辞書として変換
+    
+    #質問が無くなるまで繰り返し
+    if x == "はい":
+        #質問に対するアドバイスを出力
+        #print(advice_man[question])    #質問に対応したアドバイスを出力
+    elif x == "いいえ":
+        pass
 
-#質問が無くなるまで繰り返し
-if x == "はい":
-    print(advice_man[question])    #質問に対応したアドバイスを出力
-elif x == "いいえ":
-    pass
-
-file_man.close()
+    file_man.close()
 
 #--------------------------
 
 #女性用  
 import csv
 
-file_woman = open('女性用ファイル.csv','r')
+file_woman = open('女性用ファイル名.csv','r')    #女性用csv
 advice_woman = csv.DictReader(file)     #辞書として変換
 
-#質問が無くなるまで繰り返し
-if x == "はい":
-    print(advice_woman[question])    #質問に対応したアドバイスを出力
-elif x == "いいえ":
-    pass
+def advice_woman():
+    file_woman = open('男性用ファイル名.csv','r')    #男性用csv
+    advice_woman = csv.DictReader(file_woman)     #辞書として変換
+    
+    #質問が無くなるまで繰り返し
+    if x == "はい":
+        #質問に対するアドバイスを出力
+        #print(advice_woman[question])    #質問に対応したアドバイスを出力
+    elif x == "いいえ":
+        pass
 
-file_woman.close()
+    file_man.close()
 
 #----------------------------------------
 #最後の質問回答後
