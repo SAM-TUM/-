@@ -17,7 +17,7 @@
       import advice as ad
       
       #データ取得　仮でinput
-      gender =input()
+      gender =male
       
       #question変数に質問をcsvからリスト形式で渡す
       if gender =="male":
@@ -33,7 +33,7 @@
         print(content["question"])
         
         #入力受付
-        answer =input("Y or N")
+        answer ="はい"
         #answered =int(index)+1
         if gender =="male":
           ad.advice_man(answer,content)
