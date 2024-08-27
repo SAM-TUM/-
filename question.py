@@ -3,17 +3,12 @@
 
 import csv
 
-contentsFile = open("contents.csv","r")
-
-
-
-#csvでデータ取得　仮でinput
+#データ取得　仮でinput
 gender =input()
 
 #question変数に質問をcsvからリスト形式で渡す
 if gender =="male":
-  #男性用処理
-  questionLi =input("男性")
+  contentsFile =open("contentsMale.csv","r")
 elif gender =="female":
   #女性用処理
   questionLi =input("女性")
