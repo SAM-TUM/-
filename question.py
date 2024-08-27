@@ -20,7 +20,7 @@ for index,content in enumerate(contentsData):
   print(content[question])
   
   #入力受付
-  button =input("Y or N")
-  answered =int(index)+1
+  #button =input("Y or N")
+  #answered =int(index)+1
   
   #アドバイス出力処理
