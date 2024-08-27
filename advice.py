@@ -10,7 +10,7 @@ import csv
 #質問が無くなるまで繰り返し
 
 #男性用    
-def advice_man(x):
+def advice_man(x,advice_man):
     #file_man = open('contentsMale.csv','r')    #男性用csvを読み込み
     #advice_woman = csv.DictReader(file_man)     #辞書として変換
 
