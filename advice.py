@@ -16,10 +16,9 @@ question = input("質問番号：")
 #advice_woman = {"女質問1": "女アドバイス1", "女質問2": "女アドバイス2", "女質問3": "女アドバイス3"}
 
 #--------------------------
-
-#男性用    
 import csv
 
+#男性用    
 def advice_man():
     file_man = open('男性用ファイル名.csv','r')    #男性用csv
     advice_man = csv.DictReader(file_man)     #辞書として変換
@@ -35,15 +34,10 @@ def advice_man():
 
 #--------------------------
 
-#女性用  
-import csv
-
-file_woman = open('女性用ファイル名.csv','r')    #女性用csv
-advice_woman = csv.DictReader(file)     #辞書として変換
-
+#女性用 
 def advice_woman():
-    file_woman = open('男性用ファイル名.csv','r')    #男性用csv
-    advice_woman = csv.DictReader(file_woman)     #辞書として変換
+    file_woman = open('女性用ファイル名.csv','r')    #女性用csv
+    advice_woman = csv.DictReader(file)     #辞書として変換
     
     #質問が無くなるまで繰り返し
     if x == "はい":
