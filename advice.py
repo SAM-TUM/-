@@ -1,4 +1,4 @@
-#はい or いいえ をcsvで取得、仮でinput
+#はい or いいえ を取得、仮でinput
 x = input("はいorいいえ：")
 
 #質問番号　仮でinput
