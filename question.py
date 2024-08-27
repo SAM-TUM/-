@@ -14,11 +14,10 @@ elif gender =="female":
 else:
   pass
 contentsData =csv.DictReader(contentsFile)
-contents =contentsData
 
 #HTMLでデザイン
-for index,question in enumerate(questionLi):
-  print(question)
+for index,content in enumerate(contentsData):
+  print(content[question])
   
   #入力受付
   button =input("Y or N")
