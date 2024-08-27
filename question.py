@@ -1,6 +1,12 @@
 #アプリ内容 
 #質問分野
 
+import csv
+
+contentsFile = open("contents.csv","r")
+
+
+
 #csvでデータ取得　仮でinput
 gender =input()
 
@@ -16,9 +22,8 @@ elif gender =="female":
 for index,question in enumerate(questionLi):
   print(question)
   
-  #アドバイス出力処理
-
-	
   #入力受付
   button =input("Y or N")
-
+  answered =int(index)+1
+  
+  #アドバイス出力処理
