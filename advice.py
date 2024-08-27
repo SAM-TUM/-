@@ -16,7 +16,7 @@ def advice_man(x):
 
     if x == "はい":
         #質問に対するアドバイスを出力
-        #print(advice_man[question])    #質問に対応したアドバイスを出力
+        print(advice_man[advice])    #質問に対応したアドバイスを出力
     elif x == "いいえ":
         pass
 
@@ -31,7 +31,7 @@ def advice_woman(x):
     
     if x == "はい":
         #質問に対するアドバイスを出力
-        #print(advice_woman[question])    #質問に対応したアドバイスを出力
+        print(advice_woman[advice])    #質問に対応したアドバイスを出力
     elif x == "いいえ":
         pass
 
