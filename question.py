@@ -13,7 +13,8 @@ elif gender =="female":
   contentsFile =open("contentsFemale.csv","r")
 else:
   pass
-questionLi =None
+contentsData =csv.reader(contentsFile)
+questionLi =contentsData[0]
 
 #HTMLでデザイン
 for index,question in enumerate(questionLi):
