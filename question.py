@@ -24,7 +24,7 @@ for index,content in enumerate(contentsData):
   answer =input("Y or N")
   #answered =int(index)+1
   if gender =="male":
-    ad.advice_man(answer)
+    ad.advice_man(answer,content)
   elif gender =="female":
-    ad.advice_woman(answer)
+    ad.advice_woman(answer,content)
     
