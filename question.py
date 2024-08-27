@@ -18,7 +18,7 @@ contentsData =csv.DictReader(contentsFile)
 
 #HTMLでデザイン
 for index,content in enumerate(contentsData):
-  print(content[question])
+  print(content["question"])
   
   #入力受付
   answer =input("Y or N")
