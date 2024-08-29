@@ -33,8 +33,7 @@ function mainApp(answer){
         displayContents("question",null)
     }else if(answer){
         console.log("chosed N")
-        //アドバイスを出力
-        //document.getElementById().textContent =content[1]
+        displayContents("advice,answer)
     }else{
         console.log("not defined answer")
     };
@@ -45,7 +44,7 @@ function displayContents(select,answer){
         document.getElementById("question").textContent =contentsData[qnum][0]
         qnum++ ;
     }else if (select =="advice"){
-        mainApp(answer)
+        transition("content","display","answer")
     }
 }
 
