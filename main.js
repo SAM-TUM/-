@@ -50,5 +50,5 @@ function pushedButton(id){
     }else if (id =="next"){
         qnum++;
         displayContents("question")
-    }
+    };
 };
