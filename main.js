@@ -24,22 +24,25 @@ function selectGender(gender){
 }
 
 function mainApp(contentsData){
-    for (let content of contentsData){
-        //質問を出力
-        //document.getElementById().textContent =content[0]
-        //ページ遷移に伴いfor文の処理が途切れる場合は"content"を引数として受け渡す
-        answer =false; //仮でfalse あとで関数化
-        if (answer){
-            console.log("chosed Y")
-            //スキップ処理
-        }else if(answer){
-            console.log("chosed N")
-            //アドバイスを出力
-            //document.getElementById().textContent =content[1]
-        }else{
-            console.log("not defined answer")
-        }};
+    //質問を出力
+    //document.getElementById().textContent =content[0]
+    //ページ遷移に伴いfor文の処理が途切れる場合は"content"を引数として受け渡す
+    answer =false; //仮でfalse あとで関数化
+    if (answer){
+        console.log("chosed Y")
+        //スキップ処理
+    }else if(answer){
+        console.log("chosed N")
+        //アドバイスを出力
+        //document.getElementById().textContent =content[1]
+    }else{
+        console.log("not defined answer")
+    };
 };
+
+function displayContents(qnum,contentsData){
+    
+}
 
 function transition(id,display){
     document.getElementById("id").style.display =display;
