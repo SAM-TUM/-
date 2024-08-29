@@ -11,7 +11,7 @@
 
 <body>
   <div class="box">
-    <p class="question">質問</p>
+    <p class="question" id="content">質問</p>
     <form>
       <div class="YN">
         <p class="yes"><button type="button" class="selectAnswer" id="true" onClick="">はい</button></p>
@@ -21,7 +21,7 @@
   </div>
   <div class="button">
     <p class="return"><button type="button" onClick="transition(this.id,null,'return')">←Return</button></p>
-    <p class="next"><button type="button" onClick="transition">Next→</p>
+    <p class="next"><button type="button" onClick="transition(this.id,null,'answer'">Next→</p>
   </div>
 </body>
 </html>
