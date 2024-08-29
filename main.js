@@ -40,3 +40,8 @@ function mainApp(contentsData){
             console.log("not defined answer")
         }};
 };
+
+function transition(id,display){
+    document.getElementById("id").style.display=display
+}
+
