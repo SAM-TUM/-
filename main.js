@@ -1,5 +1,6 @@
 function defineData(){
-    qnum =1
+    qnum =0
+    currentDisplay ="question"
     maleData =[
         ["q1m","a1m"],
         ["q2m","a2m"],
@@ -22,15 +23,16 @@ function selectGender(gender){
     }else{
         console.log(gender + "error")
     };
-}
+};
 
 function displayContents(selector){
     if (selector =="question"){
         document.getElementById("contentQ").textContent =contentsData[qnum][0]
+        currentDisplay ="question"
     }else if (selector =="advice"){
         document.getElementById("contentA").textContent =contentsData[qnum][1]
+        currentDisplay ="advice"
     };
-    qnum++;
 };
 
 function transition(id,display){
@@ -40,15 +42,23 @@ function transition(id,display){
 function pushedButton(id){
     if (id =="no"){
         transition("question","none");
-        transition("advice","display");
+        transition("advice","block");
         displayContents("advice");
     }else if (id =="yes"){
-        displayContents("question")
-    }else if (id =="return"){
-        qnum--;
-        displayContents("question")
-    }else if (id =="next"){
         qnum++;
         displayContents("question")
+    }else if (id =="return"){
+        if (currentDisplay =="advice"){
+            transition("advice","none");
+            transition("question","block");
+        }else if(currentDisplay =="question") {
+            qnum--;
+        }
+        displayContents("question");
+    }else if (id =="next"){
+        qnum++;
+        displayContents("question");
     };
+    console.log(qnum)
+    console.log(currentDisplay)
 };
