@@ -24,21 +24,6 @@ function selectGender(gender){
     };
 }
 
-function mainApp(answer){
-    //質問を出力
-    //document.getElementById().textContent =content[0]
-    //ページ遷移に伴いfor文の処理が途切れる場合は"content"を引数として受け渡す
-    if (answer){
-        console.log("chosed Y")
-        // displayContents("question",null)
-    }else if(answer){
-        console.log("chosed N")
-        // displayContents("advice,answer)
-    }else{
-        console.log("not defined answer")
-    };
-};
-
 function displayContents(selector){
     if (selector =="question"){
         document.getElementById("contentQ").textContent =contentsData[qnum][0]
@@ -61,6 +46,9 @@ function pushedButton(id){
         displayContents("question")
     }else if (id =="return"){
         qnum--;
-        displayContents("
+        displayContents("question")
+    }else if (id =="next"){
+        qnum++;
+        displayContents("question")
     }
 };
