@@ -10,18 +10,18 @@
 </head>
 
 <body>
-  <div class="box">
-    <p class="question" id="content">質問</p>
+  <div id="contents" class="box">
+    <p class="question">質問</p>
     <form>
       <div class="YN">
-        <p class="yes"><button type="button" class="selectAnswer" id="true" onClick="">はい</button></p>
-        <p class="no"><button type="button" class="selectAnswer" id="false" onClick="">いいえ</button></p>
+        <p class="yes"><button type="button" class="selectAnswer" id="yes" onClick="">はい</button></p>
+        <p class="no"><button type="button" class="selectAnswer" id="no" onClick="">いいえ</button></p>
       </div>
     </form>
   </div>
   <div class="button">
-    <p class="return"><button type="button" onClick="transition(this.id,null,'return')">←Return</button></p>
-    <p class="next"><button type="button" onClick="transition(this.id,null,'answer'">Next→</p>
+    <p class="return"><button type="button" id="return" onClick="transition(this.id,null,'return')">←Return</button></p>
+    <p class="next"><button type="button" id="next" onClick="transition(this.id,null,'answer'">Next→</p>
   </div>
 </body>
 </html>
