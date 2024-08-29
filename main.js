@@ -57,8 +57,3 @@ function transition(id,display,selector){
     document.getElementById("question").textContent =contentsData[qnum_previous][0]
   }
 }
-
-function transition(id,display){
-    document.getElementById("id").style.display =display;
-}
-
