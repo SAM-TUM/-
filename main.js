@@ -30,29 +30,37 @@ function mainApp(answer){
     //ページ遷移に伴いfor文の処理が途切れる場合は"content"を引数として受け渡す
     if (answer){
         console.log("chosed Y")
-        displayContents("question",null)
+        // displayContents("question",null)
     }else if(answer){
         console.log("chosed N")
-        displayContents("advice,answer)
+        // displayContents("advice,answer)
     }else{
         console.log("not defined answer")
     };
 };
 
-function displayContents(select,answer){
-    if (select =="question"){
-        document.getElementById("question").textContent =contentsData[qnum][0]
-        qnum++ ;
-    }else if (select =="advice"){
-        transition("content","display","answer")
-    }
-}
+function displayContents(selector){
+    if (selector =="question"){
+        document.getElementById("contentQ").textContent =contentsData[qnum][0]
+    }else if (selector =="advice"){
+        document.getElementById("contentA").textContent =contentsData[qnum][1]
+    };
+    qnum++;
+};
 
-function transition(id,display,selector){
-  if (selector =="answer"){
-    document.getElementById("id").style.display =display;
-  }else if (selector =="return"){
-    qnum_previous =qnum-1;
-    document.getElementById("question").textContent =contentsData[qnum_previous][0]
-  }
-}
+function transition(id,display){
+    document.getElementById(id).style.display =display;
+};
+
+function pushedButton(id){
+    if (id =="no"){
+        transition("question","none");
+        transition("advice","display");
+        displayContents("advice");
+    }else if (id =="yes"){
+        displayContents("question")
+    }else if (id =="return"){
+        qnum--;
+        displayContents("
+    }
+};
