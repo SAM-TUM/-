@@ -1,4 +1,5 @@
 function defineData(){
+    qnum =1
     maleData =[
         ["q1m","a1m"],
         ["q2m","a2m"],
@@ -23,11 +24,10 @@ function selectGender(gender){
     };
 }
 
-function mainApp(contentsData){
+function mainApp(answer){
     //質問を出力
     //document.getElementById().textContent =content[0]
     //ページ遷移に伴いfor文の処理が途切れる場合は"content"を引数として受け渡す
-    answer =false; //仮でfalse あとで関数化
     if (answer){
         console.log("chosed Y")
         //スキップ処理
@@ -40,8 +40,13 @@ function mainApp(contentsData){
     };
 };
 
-function displayContents(qnum,contentsData){
-    
+function displayContents(select,answer){
+    if (select =="question"){
+        document.getElementById().textContent =contents[qnum][0]
+        qnum++ ;
+    }else if (select =="advice"){
+        mainApp(answer)
+    }
 }
 
 function transition(id,display){
