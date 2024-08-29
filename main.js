@@ -42,11 +42,20 @@ function mainApp(answer){
 
 function displayContents(select,answer){
     if (select =="question"){
-        document.getElementById().textContent =contents[qnum][0]
+        document.getElementById("question").textContent =contentsData[qnum][0]
         qnum++ ;
     }else if (select =="advice"){
         mainApp(answer)
     }
+}
+
+function transition(id,display,selector){
+  if (selector =="answer"){
+    document.getElementById("id").style.display =display;
+  }else if (selector =="return"){
+    qnum_previous =qnum-1;
+    document.getElementById("question").textContent =contentsData[qnum_previous][0]
+  }
 }
 
 function transition(id,display){
