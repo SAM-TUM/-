@@ -1,11 +1,19 @@
-<div class="signin">
-    <form action="" method="POST">
-        <label for="signin-id">アカウント名</label>
-        <p>
-            <input id="signin-id" name="username" type="text" placeholder="アカウント名を入力">
-        </p>
-        <button name="signin" type="submit">ログインする</button>
-        <button name="signin" type="submit">新規登録</button>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+</head>
+<body>
+    <h2>ログイン</h2>
+    <form method="POST">
+        <label for="username">名前:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">パスワード:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">ログイン</button>
     </form>
-</div>
+    <p><a href="{{ url_for('register') }}">新規登録</a></p>
+</body>
+</html>
