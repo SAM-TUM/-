@@ -42,6 +42,6 @@ function mainApp(contentsData){
 };
 
 function transition(id,display){
-    document.getElementById("id").style.display=display
+    document.getElementById("id").style.display =display;
 }
 
