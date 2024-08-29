@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規登録</title>
+</head>
+<body>
+    <h2>新規登録</h2>
+    <form method="POST">
+        <label for="username">名前:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">パスワード:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <label for="gender">性別:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">男性</option>
+            <option value="female">女性</option>
+        </select><br><br>
+        
+        <button type="submit">登録</button>
+    </form>
+    <p> <a href="{{ url_for('login') }}">ログイン</a></p>
+</body>
+</html>
