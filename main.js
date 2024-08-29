@@ -30,7 +30,7 @@ function mainApp(answer){
     //ページ遷移に伴いfor文の処理が途切れる場合は"content"を引数として受け渡す
     if (answer){
         console.log("chosed Y")
-        //スキップ処理
+        displayContents("question",null)
     }else if(answer){
         console.log("chosed N")
         //アドバイスを出力
