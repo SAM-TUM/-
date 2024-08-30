@@ -3,7 +3,6 @@ function defineData(){
     finish =2;
     currentDisplay ="question";
     adviceLi =[];
-    allAdviceText ="";
     maleData =[
         ["q1m","a1m"],
         ["q2m","a2m"],
@@ -76,15 +75,16 @@ function pushedButton(id){
 };
 
 function allAdvice(){
-    for (let advice of adviceLi){
-        allAdviceText = allAdviceText + advice + "<br>";
-    };
+    let listId =1
     if (currentDisplay =="question"){
         transition("question","none");
-        transition("advice","block") //仮でadviceに出力
+        transition("allAdvice","block") //仮でadviceに出力
     }else if (currentDisplay =="advice"){
         transition("advice","none");
-        transition("advice","block") //仮でadviceに出力
+        transition("allAdvice","block") //仮でadviceに出力
     };
-    document.getElementById("contentA") =allAdviceText; //仮でadviceに出力
+    for (let advice of adviceLi){
+        document.getElementById(listId) =advice; //仮でadviceに出力
+        listId++;
+    };
 };
