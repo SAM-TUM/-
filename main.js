@@ -80,10 +80,10 @@ function allAdvice(){
         allAdviceText = allAdviceText + advice + "<br>";
     };
     if (currentDisplay =="question"){
-        transition("question","none")
+        transition("question","none");
         transition("advice","block") //仮でadviceに出力
     }else if (currentDisplay =="advice"){
-        transition("advice","none")
+        transition("advice","none");
         transition("advice","block") //仮でadviceに出力
     };
     document.getElementById("contentA") =allAdviceText; //仮でadviceに出力
