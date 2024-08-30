@@ -3,6 +3,7 @@ function defineData(){
     finish =2;
     currentDisplay ="question";
     adviceLi =[];
+    listId =["list1","list2","list3","list4"];
     maleData =[
         ["q1m","a1m"],
         ["q2m","a2m"],
@@ -75,7 +76,7 @@ function pushedButton(id){
 };
 
 function allAdvice(){
-    let listId =1
+    let listIdIndex =1
     if (currentDisplay =="question"){
         transition("question","none");
         transition("allAdvice","block") //仮でadviceに出力
@@ -84,7 +85,7 @@ function allAdvice(){
         transition("allAdvice","block") //仮でadviceに出力
     };
     for (let advice of adviceLi){
-        document.getElementById(listId) =advice; //仮でadviceに出力
-        listId++;
+        document.getElementById(listId[listIdIndex]) =advice; //仮でadviceに出力
+        listIdIndex++;
     };
 };
