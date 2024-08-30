@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>結果</title>
+</head>
+<body>
+    <h1>アンケート結果</h1>
+    <ul>
+        {% for response in responses %}
+            <li>{{ response.name }} ({{ response.age }}歳): {{ response.feedback }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">戻る</a>
+</body>
+</html>
