@@ -3,7 +3,7 @@ function defineData(){
     finish =2;
     currentDisplay ="question";
     adviceLi =[];
-    listId =["list1","list2","list3","list4"];
+    listId =["list1","list2","list3","list4","list5","list6","list7","list8","list9","list10","list11","list12","list13","list14","list15"];
     maleData =[
         ["q1m","a1m"],
         ["q2m","a2m"],
@@ -81,7 +81,7 @@ function pushedButton(id){
 };
 
 function allAdvice(){
-    let listIdIndex =0
+    listIdIndex =0
     if (currentDisplay =="question"){
         transition("question","none");
         transition("allAdvice","block") //仮でadviceに出力
@@ -92,5 +92,9 @@ function allAdvice(){
     for (let adviceIndex of adviceLi){
         document.getElementById(listId[listIdIndex]).textContent =contentsData[adviceIndex][1]; //仮でadviceに出力
         listIdIndex++;
+    };
+    for (let listIdIndexAll = listIdIndex ; listIdIndexAll < 15 ; listIdIndexAll++) {
+        document.getElementById(listId[listIdIndexAll]).style.display ="none";
+        console.log("消えました")
     };
 };
