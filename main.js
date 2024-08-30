@@ -50,8 +50,12 @@ function pushedButton(id){
         transition("advice","block");
         displayContents("advice");
     }else if (id =="yes"){
+        if (qnum ==finish){
+            allAdvice();
+        }else{
         qnum++;
         displayContents("question");
+        };
     }else if (id =="return"){
         if (currentDisplay =="advice"){
             transition("advice","none");
@@ -63,20 +67,21 @@ function pushedButton(id){
     }else if (id =="next"){
         if (qnum ==finish){
             allAdvice();
-        }
+        }else{
         if (currentDisplay =="advice"){
             transition("advice","none");
             transition("question","block");
-        }
+        };
         qnum++;
         displayContents("question");
+        };
     };
     console.log(qnum);
     console.log(currentDisplay);
 };
 
 function allAdvice(){
-    let listIdIndex =1
+    let listIdIndex =0
     if (currentDisplay =="question"){
         transition("question","none");
         transition("allAdvice","block") //仮でadviceに出力
@@ -84,8 +89,8 @@ function allAdvice(){
         transition("advice","none");
         transition("allAdvice","block") //仮でadviceに出力
     };
-    for (let advice of adviceLi){
-        document.getElementById(listId[listIdIndex]) =advice; //仮でadviceに出力
+    for (let adviceIndex of adviceLi){
+        document.getElementById(listId[listIdIndex]).textContent =contentsData[adviceIndex][1]; //仮でadviceに出力
         listIdIndex++;
     };
 };
