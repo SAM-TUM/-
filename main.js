@@ -1,6 +1,6 @@
 function defineData(){
     qnum =0;
-    finish =10;
+    finish =9;
     currentDisplay ="question";
     adviceLi =[];
     listId =["list1","list2","list3","list4","list5","list6","list7","list8","list9","list10","list11","list12","list13","list14","list15"];
@@ -79,7 +79,7 @@ function pushedButton(id){
         }
         displayContents("question");
     }else if (id =="next"){
-        if (qnum ==finish){
+        if (qnum >= finish){
             allAdvice();
         }else if (currentDisplay =="allAdvice"){
             window.location.href ="gender.html";
