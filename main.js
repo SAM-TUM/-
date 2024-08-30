@@ -81,14 +81,16 @@ function pushedButton(id){
     }else if (id =="next"){
         if (qnum ==finish){
             allAdvice();
+        }else if (currentDisplay =="allAdvice"){
+            window.location.href ="gender.html";
         }else{
-        if (currentDisplay =="advice"){
-            transition("advice","none");
-            transition("question","block");
-        };
-        qnum++;
-        displayContents("question");
-        };
+            if (currentDisplay =="advice"){
+                transition("advice","none");
+                transition("question","block");
+            };
+            qnum++;
+            displayContents("question");
+            };
     };
     console.log(qnum);
     console.log(currentDisplay);
@@ -103,6 +105,8 @@ function allAdvice(){
         transition("advice","none");
         transition("allAdvice","block") //仮でadviceに出力
     };
+    currentDisplay =="allAdvice";
+        document.getElementById(
     for (let adviceIndex of adviceLi){
         document.getElementById(listId[listIdIndex]).textContent =contentsData[adviceIndex][1]; //仮でadviceに出力
         listIdIndex++;
