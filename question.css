@@ -124,10 +124,10 @@ body {
     transition: 0.2s ease-in-out;
 }
 .yes {
-    background: url(../img/circle.svg) no-repeat #fff center;
+    background: url(circle.svg) no-repeat #fff center;
 }
 .no {
-    background: url(../img/cross.svg) no-repeat #fff center;
+    background: url(cross.svg) no-repeat #fff center;
 }
 
 .selectButton {
