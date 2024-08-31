@@ -105,9 +105,9 @@ function allAdvice(){
         transition("advice","none");
         transition("allAdvice","block") //仮でadviceに出力
     };
-    transition("next","none");
+    transition("return","none");
     currentDisplay =="allAdvice";
-    document.getElementById("next").textContent ="アンケートに回答する";
+    document.getElementById("next").textContent ="webサイトへ";
     for (let adviceIndex of adviceLi){
         document.getElementById(listId[listIdIndex]).textContent =contentsData[adviceIndex][1]; //仮でadviceに出力
         listIdIndex++;
