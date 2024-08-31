@@ -84,8 +84,9 @@ body {
 }
 .A_list {
     margin: 10px 0;
-    padding: 10px 10px;
+    padding: 10px 20px;
     list-style-type: disc; /* 黒点（ディスク）スタイルを追加 */
+    overflow-y: scroll;
 }
 .A_list li {
     margin-bottom: 10px; /* リストアイテム間の余白を追加 */
