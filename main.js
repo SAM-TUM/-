@@ -82,7 +82,8 @@ function pushedButton(id){
         if (qnum >= finish){
             allAdvice();
         }else if (currentDisplay =="allAdvice"){
-            window.location.href ="gender.html";
+            console.log("アンケートページに移動")
+            document.location.href ="gender.html";
         }else{
             if (currentDisplay =="advice"){
                 transition("advice","none");
@@ -92,8 +93,8 @@ function pushedButton(id){
             displayContents("question");
             };
     };
-    console.log(qnum);
-    console.log(currentDisplay);
+//    console.log(qnum);
+//    console.log(currentDisplay);
 };
 
 function allAdvice(){
@@ -105,8 +106,8 @@ function allAdvice(){
         transition("advice","none");
         transition("allAdvice","block") //仮でadviceに出力
     };
-    transition("return","none");
-    currentDisplay =="allAdvice";
+    currentDisplay ="allAdvice";
+    transition("returnButton","none");
     document.getElementById("next").textContent ="webサイトへ";
     for (let adviceIndex of adviceLi){
         document.getElementById(listId[listIdIndex]).textContent =contentsData[adviceIndex][1]; //仮でadviceに出力
@@ -114,6 +115,6 @@ function allAdvice(){
     };
     for (let listIdIndexAll = listIdIndex ; listIdIndexAll < 15 ; listIdIndexAll++) {
         document.getElementById(listId[listIdIndexAll]).style.display ="none";
-        console.log("消えました")
+//        console.log("消えました")
     };
 };
