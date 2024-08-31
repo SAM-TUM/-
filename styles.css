@@ -1,6 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to right, #47C7BE, #F9DD5E);
+    color: #fff;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,12 +11,13 @@ body {
 }
 
 form {
-    background-color: #ffffff;
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -23,6 +25,8 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
+    letter-spacing: 1px;
+    font-family: 'Cursive', sans-serif;  /* おしゃれなフォントを使用 */
 }
 
 label {
@@ -30,35 +34,51 @@ label {
     margin-bottom: 8px;
     color: #555;
     font-size: 14px;
+    font-weight: bold;
 }
 
 input[type="text"], input[type="number"], textarea {
     width: 100%;
-    padding: 10px;
+    padding: 10px 15px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 14px;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
-    border-color: #4CAF50;
+    border-color: #47C7BE;
     outline: none;
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #47C7BE;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 6px;
+    padding: 12px;
     font-size: 16px;
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #3ba89c;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #47C7BE;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
