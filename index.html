@@ -2,21 +2,140 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>アンケート</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Beauty">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/beauty/favicons_img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./img/beauty/favicons_img/apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="./img/beauty/favicons_img/android-chrome-192x192.png" sizes="192x192">
+    <title>Beauty</title>
 </head>
+
+<!------- 要素の背景色はほとんど仮のもの ------->
+<!------- 画像のサイズなどは適宜調整 ------->
+
 <body>
-    <form action="{{ url_for('submit') }}" method="post">
-        <label for="name">名前:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="age">年齢:</label>
-        <input type="number" id="age" name="age" required>
-
-        <label for="feedback">ご意見:</label>
-        <textarea id="feedback" name="feedback" rows="4" required></textarea>
-
-        <input type="submit" value="送信">
-    </form>
+    <header>
+        <a href="index.html"><img src="img/beauty/1 (1).png" alt="rogo_img" class="rogo_img"></a>
+        <a class="header_button" href=""> <!------- アンケートのURL先はまだ仮のもの ------->
+            <img src="./img/beauty/アンケート-removebg-preview.png" alt="アンケート_img">
+        </a>
+    </header>
+    <main>
+        <div class="main_box1">
+            <p><img src="./img/beauty/メイン画面/メイン画面.001.png" alt="main_box1_img" class="main_box1_img"></p>
+        </div>
+        <div class="main_box2" id="main_box2">
+            <div class="main_box2_left">
+                <img src="./img/beauty/2-full_0.png" alt="main_box2_icon" class="main_box2_icon">
+                <div class="main_box2_text">
+                    <h3>Beautyとは</h3>
+                    <p>質問に答えていくだけで今の自分に足りないもの、<br>ことを知れるアプリです。的確なアドバイスであなたを変えていきます。<br>皆様の人生をより豊かなものにしていきます。</p>
+                </div>
+            </div>
+            <div class="main_box2_right">
+                <img src="img/beauty/名称未設定フォルダ 2/名称未設定のデザイン.png" alt="main_box2_img" class="main_box2_img">
+            </div>
+        </div>
+        <div class="main_box3">
+            <h1>モテ活をしよう</h1>
+            <ul class="main_box3_list">
+                <li>
+                    <h2>Step1</h2>
+                    <div class="bg1">
+                        <img src="img/beauty/名称未設定フォルダ 2/step1.png" alt="main_box3_img1" class="main_box3_img1">
+                    </div>
+                    <div class="main_box3_text">
+                        <h2>質問に答えよう</h2>
+                        <p>質問に答えて現状を知ろう</p>
+                    </div>
+                </li>
+                <li>
+                    <h2>Step2</h2>
+                    <div class="bg2">
+                        <img src="img/beauty/名称未設定フォルダ 2/step2.png" alt="main_box3_img2" class="main_box3_img2">
+                    </div>
+                    <div class="main_box3_text">
+                        <h2>アドバイスを見よう</h2>
+                        <p>改善策を見て確かめてみよう</p>
+                    </div>
+                </li>
+                <li>
+                    <h2>Step3</h2>
+                    <div class="bg3">
+                        <img src="img/beauty/名称未設定フォルダ 2/step3.png" alt="main_box3_img3" class="main_box3_img3">
+                    </div>
+                    <div class="main_box3_text">
+                        <h2>まとめで知ろう</h2>
+                        <p>まとめを見てやっていくことを確かめよう</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="main_box4">
+            <h1>こんな方におすすめ</h1>
+            <div class="main_box4_body">
+                <div class="main_box4_1">
+                    <div class="main_box4_comment">
+                        <p>自分を変えたい</p>
+                    </div>
+                    <div class="main_box4_icon">
+                        <img src="./img/beauty/初期アイコン.png" alt="icon1_img" class="icon1_img">
+                        <h3>Aさん</h3>
+                    </div>
+                </div>
+                <div class="main_box4_2">
+                    <div class="main_box4_comment">
+                        <p>モテたい</p>
+                    </div>
+                    <div class="main_box4_icon">
+                        <img src="./img/beauty/初期アイコン.png" alt="icon2_img" class="icon2_img">
+                        <h3>Bさん</h3>
+                    </div>
+                </div>
+                <div class="main_box4_3">
+                    <div class="main_box4_comment">
+                        <p>合コンまでに変わりたい</p>
+                    </div>
+                    <div class="main_box4_icon">
+                        <img src="./img/beauty/初期アイコン.png" alt="icon3_img" class="icon3_img">
+                        <h3>Cさん</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_box5">
+        </div>
+        <div class="main_box6">
+            <div class="main_box6_text">
+                <div>
+                    <p>お手軽モテ活アプリ</p>
+                    <p>今すぐBeautyを始めよう！</p>
+                    <a href="#" class="main_box6_button">無料で始める</a>
+                </div>
+            </div>
+            <img src="./img/beauty/saigono-removebg-preview.png" alt="main_box6_img" class="main_box6_img">
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul class="footer_list">
+                <li>
+                    <img src="./img/beauty/2-full_0.png" alt="footer_icon_img" class="footer_icon_img">
+                </li>
+                <li>
+                    <a href="anke.html">アンケート</a> <!------- アンケートのURL先はまだ仮のもの ------->
+                </li>
+                <li>
+                    <a href="#main_box2">Beautyとは</a>
+                </li>
+                <li>
+                    <a href="#">無料で始める</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="index.html"><img src="./img/beauty/footer_rogo.png" alt="footer_rogo_img" class="footer_rogo_img"></a>
+    </footer>
 </body>
 </html>
