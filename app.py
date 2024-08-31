@@ -1,56 +1,53 @@
 from flask import Flask, render_template, request, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 
-# 仮のユーザー情報（性別情報を追加）
-users = {}
+# 現在のディレクトリパスを取得して、SQLiteデータベースをそのディレクトリに保存
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'survey.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+# アンケート結果を保存するテーブルのモデルを定義
+class SurveyResponse(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    age = db.Column(db.Integer, nullable=False)
+    feedback = db.Column(db.Text, nullable=False)
+
+# テーブルを作成
+with app.app_context():
+    db.create_all()
 
 @app.route('/')
-def home():
-    return "Welcome to the home page!"
+def index():
+    return render_template('index.html')
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        
-        # ユーザーの認証
-        if username in users and users[username]['password'] == password:
-            gender = users[username]['gender']
-            if gender == 'male':
-                return redirect(url_for('male_home'))
-            elif gender == 'female':
-                return redirect(url_for('female_home'))
-            else:
-                return redirect(url_for('home'))
-        else:
-            return "Invalid credentials. Please try again."
+@app.route('/submit', methods=['POST'])
+def submit():
+    name = request.form['name']
+    age = request.form['age']
+    feedback = request.form['feedback']
     
-    return render_template('login.html')
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        gender = request.form['gender']
-        
-        if username in users:
-            return "Username already exists. Please choose a different one."
-        else:
-            users[username] = {'password': password, 'gender': gender}
-            return redirect(url_for('login'))
+    # データベースに保存
+    response = SurveyResponse(name=name, age=age, feedback=feedback)
+    db.session.add(response)
+    db.session.commit()
     
-    return render_template('register.html')
+    return redirect(url_for('thank_you'))
 
-@app.route('/male_home')
-def male_home():
-    return "Welcome to the male homepage!"
+@app.route('/thank_you')
+def thank_you():
+    return render_template('thank_you.html')
 
-@app.route('/female_home')
-def female_home():
-    return "Welcome to the female homepage!"
+@app.route('/results')
+def results():
+    # データベースから全てのアンケート結果を取得
+    responses = SurveyResponse.query.all()
+    return render_template('results.html', responses=responses)
 
 if __name__ == '__main__':
     app.run(debug=True)
