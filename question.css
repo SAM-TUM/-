@@ -89,7 +89,7 @@ body {
     overflow-y: scroll;
 }
 .A_list li {
-    margin-bottom: 10px; /* リストアイテム間の余白を追加 */
+    margin-bottom: 20px; /* リストアイテム間の余白を追加 */
     text-align: left;
 }
 
